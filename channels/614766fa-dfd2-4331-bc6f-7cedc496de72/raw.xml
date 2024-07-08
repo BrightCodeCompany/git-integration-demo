@@ -3,7 +3,7 @@
   <nextMetaDataId>4</nextMetaDataId>
   <name>Blood analyzer 1</name>
   <description></description>
-  <revision>1</revision>
+  <revision>2</revision>
   <sourceConnector version="4.5.0">
     <metaDataId>0</metaDataId>
     <name>sourceConnector</name>
@@ -26,6 +26,7 @@
     </properties>
     <transformer version="4.5.0">
       <elements/>
+      <inboundTemplate encoding="base64"></inboundTemplate>
       <inboundDataType>HL7V2</inboundDataType>
       <outboundDataType>HL7V2</outboundDataType>
       <inboundProperties class="com.mirth.connect.plugins.datatypes.hl7v2.HL7v2DataTypeProperties" version="4.5.0">
@@ -108,7 +109,22 @@
       </outboundProperties>
     </transformer>
     <filter version="4.5.0">
-      <elements/>
+      <elements>
+        <com.mirth.connect.plugins.rulebuilder.RuleBuilderRule version="4.5.0">
+          <name>Accept message if &quot;&apos;MSH.1&apos;&quot; exists</name>
+          <sequenceNumber>0</sequenceNumber>
+          <enabled>true</enabled>
+          <field>&apos;MSH.1&apos;</field>
+          <condition>EXISTS</condition>
+          <values/>
+        </com.mirth.connect.plugins.rulebuilder.RuleBuilderRule>
+        <com.mirth.connect.plugins.javascriptrule.JavaScriptRule version="4.5.0">
+          <sequenceNumber>1</sequenceNumber>
+          <enabled>true</enabled>
+          <operator>AND</operator>
+          <script>const importantValue = &apos;yes, absolutely&apos;</script>
+        </com.mirth.connect.plugins.javascriptrule.JavaScriptRule>
+      </elements>
     </filter>
     <transportName>Channel Reader</transportName>
     <mode>SOURCE</mode>
