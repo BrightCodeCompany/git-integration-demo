@@ -3,7 +3,7 @@
   <nextMetaDataId>4</nextMetaDataId>
   <name>Blood analyzer 1</name>
   <description></description>
-  <revision>2</revision>
+  <revision>3</revision>
   <sourceConnector version="4.5.0">
     <metaDataId>0</metaDataId>
     <name>sourceConnector</name>
@@ -568,7 +568,20 @@
         <mapVariables/>
       </properties>
       <transformer version="4.5.0">
-        <elements/>
+        <elements>
+          <com.mirth.connect.plugins.mapper.MapperStep version="4.5.0">
+            <name>transformerVar</name>
+            <sequenceNumber>0</sequenceNumber>
+            <enabled>true</enabled>
+            <variable>transformerVar</variable>
+            <mapping>&apos;MSH.1&apos;</mapping>
+            <defaultValue>&apos;defaultVal&apos;</defaultValue>
+            <replacements/>
+            <scope>CHANNEL</scope>
+          </com.mirth.connect.plugins.mapper.MapperStep>
+        </elements>
+        <inboundTemplate encoding="base64"></inboundTemplate>
+        <outboundTemplate encoding="base64"></outboundTemplate>
         <inboundDataType>HL7V2</inboundDataType>
         <outboundDataType>HL7V2</outboundDataType>
         <inboundProperties class="com.mirth.connect.plugins.datatypes.hl7v2.HL7v2DataTypeProperties" version="4.5.0">
