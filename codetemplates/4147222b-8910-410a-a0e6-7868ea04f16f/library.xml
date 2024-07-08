@@ -1,0 +1,21 @@
+<codeTemplateLibrary version="4.5.0">
+  <id>4147222b-8910-410a-a0e6-7868ea04f16f</id>
+  <name>Core library</name>
+  <revision>1</revision>
+  <lastModified>
+    <time>1720469823895</time>
+    <timezone>GMT</timezone>
+  </lastModified>
+  <description></description>
+  <includeNewChannels>false</includeNewChannels>
+  <enabledChannelIds/>
+  <disabledChannelIds>
+    <string>a48c829b-748b-4d51-b453-bd58cffde999</string>
+    <string>614766fa-dfd2-4331-bc6f-7cedc496de72</string>
+  </disabledChannelIds>
+  <codeTemplates>
+    <codeTemplate version="4.5.0">
+      <id>67b3719d-6f5b-4ed3-9767-5f9054af8378</id>
+    </codeTemplate>
+  </codeTemplates>
+</codeTemplateLibrary>
