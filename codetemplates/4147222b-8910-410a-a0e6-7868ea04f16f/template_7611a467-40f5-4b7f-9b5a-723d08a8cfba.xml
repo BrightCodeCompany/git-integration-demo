@@ -1,0 +1,31 @@
+<codeTemplate version="4.5.0">
+  <id>7611a467-40f5-4b7f-9b5a-723d08a8cfba</id>
+  <name>Database</name>
+  <revision>1</revision>
+  <lastModified>
+    <time>1720469859754</time>
+    <timezone>GMT</timezone>
+  </lastModified>
+  <contextSet>
+    <delegate>
+      <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+      <contextType>SOURCE_RECEIVER</contextType>
+      <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+      <contextType>DESTINATION_DISPATCHER</contextType>
+      <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
+    </delegate>
+  </contextSet>
+  <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
+    <type>FUNCTION</type>
+    <code>/**
+	Modify the description here. Modify the function name and parameters as needed. One function per
+	template is recommended; create a new code template for each new function.
+
+	@param {String} arg1 - arg1 description
+	@return {String} return description
+*/
+function getDatabaseConnection(arg1) {
+	// return new DatabaseConnection
+}</code>
+  </properties>
+</codeTemplate>
