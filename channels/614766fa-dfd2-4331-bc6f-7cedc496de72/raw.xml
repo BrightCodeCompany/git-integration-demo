@@ -3,7 +3,7 @@
   <nextMetaDataId>4</nextMetaDataId>
   <name>Blood analyzer 1</name>
   <description></description>
-  <revision>3</revision>
+  <revision>4</revision>
   <sourceConnector version="4.5.0">
     <metaDataId>0</metaDataId>
     <name>sourceConnector</name>
@@ -762,6 +762,9 @@ return message;</preprocessingScript>
 return;</postprocessingScript>
   <deployScript>// This script executes once when the channel is deployed
 // You only have access to the globalMap and globalChannelMap here to persist data
+
+
+const runOnDeploy = true
 return;</deployScript>
   <undeployScript>// This script executes once when the channel is undeployed
 // You only have access to the globalMap and globalChannelMap here to persist data
